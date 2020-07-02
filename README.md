@@ -64,8 +64,8 @@ Things you may want to cover:
 |------|----|------|
 |  body|text||
 | image|string||
-|group_id|string|null: false,foreign_key: true|
-|user_id|string|null: false,foreign_key: true|
+|group_id|integer|null: false,foreign_key: true|
+|user_id|integer|null: false,foreign_key: true|
 
 ## Association
 - belong_to :user
