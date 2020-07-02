@@ -36,8 +36,8 @@ Things you may want to cover:
 
 ## userテーブル
 
-|Column|Type|Option|
-|------|----|------|
+|Column|Type|Options|
+|------|----|-------|
 |  name|string|null: false|
 |  mail|string|null: false,unique: true|
 |password|string|null: false|
@@ -49,7 +49,7 @@ Things you may want to cover:
 
 ## groupテーブル
 
-|Column|Type|Option|
+|Column|Type|Options|
 |------|----|------|
 |  name|string|null: false,unique: true|
 |user_id|integer|null: false,foreign_key: true|
@@ -61,7 +61,7 @@ Things you may want to cover:
 
 ## messageグループ
 　
-|Column|Type|Option|
+|Column|Type|Options|
 |------|----|------|
 |  body|text|null: false|
 | image|string|----|
