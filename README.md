@@ -38,7 +38,6 @@ Things you may want to cover:
 
 |Column|Type|Option|
 |------|----|------|
-|    id|integer|
 |  name|string|null: false|
 |  mail|string|null: false,unique: true|
 |password|string|null: false|
