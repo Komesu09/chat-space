@@ -64,7 +64,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|------|
 |  body|text|null: false|
-| image|string|----|
+| image|string||
 |group_id|string|null: false,foreign_key: true|
 |user_id|string|null: false,foreign_key: true|
 
