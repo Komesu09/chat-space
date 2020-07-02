@@ -37,7 +37,7 @@ Things you may want to cover:
 ## userテーブル
 
 |Column|Type|Options|
-|------|----|-------|
+|------|----|-------|
 |  name|string|null: false|
 |  mail|string|null: false,unique: true|
 |password|string|null: false|
