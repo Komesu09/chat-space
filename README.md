@@ -33,3 +33,42 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## userテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|    id|integer|
+|  name|string|null: false|
+|  mail|string|null: false,unique: true|
+|password|string|null: false|
+
+### Association
+- belong_to :message
+- has_many :users_groups
+- has_many :group, through: :users_groups
+
+## groupテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|  name|string|null: false,unique: true|
+|user_id|integer|null: false,foreign_key: true|
+
+### Association
+- belong_to :message
+- has_many :users_groups
+- has_many :group, through: :users_groups
+
+## messageグループ
+　
+|Column|Type|Option|
+|------|----|------|
+|  body|text|null: false|
+| image|string|----|
+|group_id|string|null: false,foreign_key: true|
+|user_id|string|null: false,foreign_key: true|
+
+## Association
+- has_many :user
+- has_many :group
