@@ -1,1 +1,45 @@
-<チャット画面>
+.Chat-main
+  .Chat-main__group-info
+    .left-box
+      .current-group
+        name
+      %ul.member-list
+        Member :
+        %li.member-list__member
+          chiharu
+    .btn
+      = link_to "Edit", "#",class: "btn__edit" 
+  .Chat-main__message-list
+    .list
+      .top
+        .top__name
+          chiharu
+        .top__date
+          2020/07/08(Wed)9:00
+      .list__message
+        hello
+    .list
+      .top
+        .top__name
+          chiharu
+        .top__date
+          2020/07/08(Wed)9:00
+      .list__message
+        hello
+    .list
+      .top
+        .top__name
+          chiharu
+        .top__date
+          2020/07/08(Wed)9:00
+      .list__message
+        hello
+  .Chat-main__message-form
+    %form.new-message
+      .new-message__form
+        %input.text{placeholder: "type a message", type: "text"}
+        %label{class: "form-icon"}
+          = icon('far', 'image')
+          %input{type: "file", class: "image"}
+      .form-btn
+        = link_to "Send", "#", class:"form-btn__send" 
