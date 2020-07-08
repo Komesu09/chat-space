@@ -22,7 +22,7 @@
       margin: 0 20px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      font-weight: bold;
       &__name {
         color: #ffffff;
         font-size: 16px;
@@ -67,34 +67,38 @@
     background-color: #ffffff;
     height: 100px;
     border-bottom: 1px solid #eeeeee;
-    padding: 0 40px;
     display: flex;
-    justify-content: space-between;
+    padding: 0 40px;
     align-items: center;
-    .left-box{
-      &__name {
-        font-size: 20px;
+    justify-content: space-between;
+    .left-box {
+      display: flex;
+      flex-direction: column;
+      .current-group {
         color: #333333;
-        margin-top: 35px;
-        display: flex;
-        align-items: flex-end;
+        margin: 35px 0 15px 0;
+        font-size: 20px;
       }
-      .members-list {
+      .member-list {
         font-size: 12px;
         color: #999999;
-        margin-top: 15px;
         display: flex;
+        list-style: none;
         &__member {
           margin-left: 5px;
         }
       }
     }
-    .edit-btn{
-      font-size: 16px;
-      color: #38aef0;
-      border: 1px solid #38aef0;
-      padding: 12px 20px;
-      text-decoration: none;
+    .btn {
+      &__edit {
+        font-size: 16px;
+        color: #38aef0;
+        border: 1px solid #38aef0;
+        padding: 11px 20px;
+        height: 40px;
+        margin-top: 28px;
+        text-decoration: none;
+      }
     }
   }
   &__message-list {

@@ -1,12 +1,13 @@
 .Chat-main
   .Chat-main__group-info
     .left-box
-      .left-box__name
-        test
-      %ul.members-list 
-        Member:
-        %li.members-list__member chiharu
-    = link_to "#", class: "edit-btn" do
-      Edit
+      .current-group
+        name
+      %ul.member-list
+        Member :
+        %li.member-list__member
+          chiharu
+    .btn
+      = link_to "Edit", "#",class: "btn__edit" 
   .Chat-main__message-list
   .Chat-main__message-form
