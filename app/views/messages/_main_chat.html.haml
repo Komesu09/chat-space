@@ -35,3 +35,11 @@
       .list__message
         hello
   .Chat-main__message-form
+    %form.new-message
+      .new-message__form
+        %input.text{placeholder: "type a message", type: "text"}
+        %label{class: "form-icon"}
+          = icon('far', 'image')
+          %input{type: "file", class: "image"}
+      .form-btn
+        = link_to "Send", "#", class:"form-btn__send" 
