@@ -12,7 +12,7 @@
   .Side-bar__group-list
     - current_user.groups.each do |group|
       .bottom-items
-        = link_to '#', class: "group-menu" do
+        = link_to group_messages_path(group) do
           .group-menu__group-name
             = group.name
           .group-menu__content

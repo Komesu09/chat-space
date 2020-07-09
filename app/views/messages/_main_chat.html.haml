@@ -10,36 +10,12 @@
     .btn
       = link_to "Edit", "#",class: "btn__edit" 
   .Chat-main__message-list
-    .list
-      .top
-        .top__name
-          chiharu
-        .top__date
-          2020/07/08(Wed)9:00
-      .list__message
-        hello
-    .list
-      .top
-        .top__name
-          chiharu
-        .top__date
-          2020/07/08(Wed)9:00
-      .list__message
-        hello
-    .list
-      .top
-        .top__name
-          chiharu
-        .top__date
-          2020/07/08(Wed)9:00
-      .list__message
-        hello
+    = render @messages
   .Chat-main__message-form
-    %form.new-message
+    = form_with model: [@group, @message], html: {class: "new-message"},local: true do |f|
       .new-message__form
-        %input.text{placeholder: "type a message", type: "text"}
-        %label{class: "form-icon"}
+        = f.text_field :content, class: 'text', placeholder: "type a message"
+        = f.label :image, class: 'form-icon' do
           = icon('far', 'image')
-          %input{type: "file", class: "image"}
-      .form-btn
-        = link_to "Send", "#", class:"form-btn__send" 
+          = f.file_field :image, class: 'image'
+      = f.submit "Send", class: 'form-btn'
