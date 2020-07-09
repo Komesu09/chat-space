@@ -46,15 +46,18 @@
     background-color: #2f3e51;
     height:  calc(100vh - 100px);
     .bottom-items {
-      color: #ffffff;
       padding: 20px 20px;
-      &__group-name {
-        font-size: 15px;
-        margin-bottom: 5px; 
-      }
-      &__content {
-        font-size: 11px;
-        margin-bottom: 20px;
+      .group-menu {
+        color: #ffffff;
+        text-decoration: none;
+        &__group-name {
+          font-size: 15px;
+          margin-bottom: 5px; 
+        }
+        &__content {
+          font-size: 11px;
+          margin-bottom: 20px;
+        }
       }
     }
   }
