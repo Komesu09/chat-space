@@ -5,23 +5,15 @@
       .top-items__name
         = current_user.name
       .menu
-        = link_to "#", class: "menu__icons" do
+        = link_to new_group_path, class: "menu__icons" do
           = icon('far', 'edit', class: 'new')
         = link_to edit_user_path(current_user), class: "menu__icons" do
           = icon('fas', "cog", class: 'edit')
   .Side-bar__group-list
-    .bottom-items
-      .bottom-items__group-name
-        techcamp
-      .bottom-items__content
-        まだメッセージがありません
-    .bottom-items
-      .bottom-items__group-name
-        techcamp
-      .bottom-items__content
-        まだメッセージがありません
-    .bottom-items
-      .bottom-items__group-name
-        techcamp
-      .bottom-items__content
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .bottom-items
+        = link_to '#', class: "group-menu" do
+          .group-menu__group-name
+            = group.name
+          .group-menu__content
+            メッセージはまだありません
