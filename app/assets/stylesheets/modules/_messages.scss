@@ -125,10 +125,15 @@
           margin-left: 10px;
         }
       }
-      &__message {
-        margin-bottom: 46px;
-        font-size: 14px;
-        color: #434a54;
+      .message {
+        &__content {
+          margin-bottom: 46px;
+          font-size: 14px;
+          color: #434a54;
+        }
+        &__image {
+          width: 200px;
+        }
       }
     }
   }
