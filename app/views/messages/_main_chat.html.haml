@@ -2,20 +2,19 @@
   .Chat-main__group-info
     .left-box
       .current-group
-        name
       %ul.member-list
         Member :
         %li.member-list__member
-          chiharu
+          
     .btn
       = link_to "Edit", "#",class: "btn__edit" 
   .Chat-main__message-list
     = render @messages
   .Chat-main__message-form
     = form_with model: [@group, @message], html: {class: "new-message"},local: true do |f|
-      .new-message__form
+      .form-content
         = f.text_field :content, class: 'text', placeholder: "type a message"
         = f.label :image, class: 'form-icon' do
-          = icon('far', 'image')
+          = icon('far', 'image', class: 'image-icon')
           = f.file_field :image, class: 'image'
       = f.submit "Send", class: 'form-btn'
