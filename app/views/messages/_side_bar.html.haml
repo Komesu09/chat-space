@@ -11,9 +11,9 @@
           = icon('fas', "cog", class: 'edit')
   .Side-bar__group-list
     - current_user.groups.each do |group|
-      .bottom-items
-        = link_to '#', class: "group-menu" do
-          .group-menu__group-name
+      .group-menu
+        = link_to group_messages_path(group), class: "link" do
+          .group-name
             = group.name
-          .group-menu__content
-            メッセージはまだありません
+          .content
+            = group.show_last_message

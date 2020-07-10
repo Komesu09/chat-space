@@ -45,19 +45,21 @@
   &__group-list {
     background-color: #2f3e51;
     height:  calc(100vh - 100px);
-    .bottom-items {
-      padding: 20px 20px;
-      .group-menu {
-        color: #ffffff;
-        text-decoration: none;
-        &__group-name {
-          font-size: 15px;
-          margin-bottom: 5px; 
-        }
-        &__content {
-          font-size: 11px;
-          margin-bottom: 20px;
-        }
+    padding: 0 20px;
+    overflow: scroll;
+    .group-menu {
+      padding: 20px 0 40px;
+      box-sizing: border-box;
+      .link {
+      text-decoration: none;
+      color: #ffffff;
+      }
+      .group-name {
+        font-size: 15px;
+      }
+      .content {
+        font-size: 11px;
+        margin-top: 5px;
       }
     }
   }
@@ -123,55 +125,59 @@
           margin-left: 10px;
         }
       }
-      &__message {
-        margin-bottom: 46px;
-        font-size: 14px;
-        color: #434a54;
+      .message {
+        &__content {
+          margin-bottom: 46px;
+          font-size: 14px;
+          color: #434a54;
+        }
+        &__image {
+          width: 200px;
+        }
       }
     }
   }
   &__message-form {
+    width: 100%;
     background-color: #d2d2d2;
     height: 90px;
+    box-sizing: border-box;
+    padding: 20px 50px 20px 40px;
     .new-message {
-      height: 100%;
-      margin: 0 40px;
+      width: 100%;
       display: flex;
-      align-items: center;
-      &__form {
+      justify-content: space-between;
+      .form-content {
         width: 100%;
-        display: flex;
+        background-color: #fff;
         position: relative;
-        align-items: center;
         .text {
           height: 50px;
           width: 100%;
-          border-style: none;
-          color: black;
-          font-size: 16px;
-          padding:0 10px;
+          border: none;
+          padding:0 45px 0 15px;
         }
         .form-icon {
           position: absolute;
-          right: 0;
-          font-size: 25px;
-          padding: 0 10px;
-        }
-        .image {
-          display: none;
+          right: 10px;
+          height: 50px;
+          .image-icon {
+            line-height: 50px;
+            font-size: 25px;
+          }
+          .image {
+            display: none;
+          }
         }
       }
       .form-btn {
-        &__send{
-          width: 100px;
-          height: 50px;
-          padding: 17px 30px;
-          margin-left: 15px;
-          background-color: #38aef0;
-          font-size: 16px;
-          color: #fff;
-          text-decoration: none;
-        }
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        font-size: 16px;
+        color: #fff;
+        border: none;
       }
     }
   }
