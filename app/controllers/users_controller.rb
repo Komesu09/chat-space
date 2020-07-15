@@ -10,6 +10,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @user = User.search(params[:keyword], current_user.id)
+
+    respond_to do |foemat|
+      format.html
+      format.json
+    end
   private
 
   def user_params
