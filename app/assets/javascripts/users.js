@@ -42,5 +42,31 @@ $(function() {
       alert("通信エラーです。ユーザーが表示できません。");
     });
   });
+
+  function addMember(name, id) {
+    let html = `
+                <div class="ChatMember">
+                  <p class="ChatMember__name">${name}</p>
+                  <input name="group[user_ids][]" type="hidden" value="${id}" />
+                  <div class="ChatMember__remove ChatMember__button">削除</div>
+                </div>
+                `;
+    $(".ChatMembers").append(html);
+  }
+
+
+  $("#UserSearchResult").on("click", ".ChatMember__add", function() {
+    let UserId = $(this).attr("data-user-id");
+    let UserName = $(this).attr("data-user-name");
+    $(this)
+    .parent()
+    .remove();
+    addMember(UserName, UserId);
+  });
+  $(".ChatMembers").on("click", ".ChatMember__remove", function() {
+    $(this)
+      .parent() 
+      .remove();
+  });
 });
 
