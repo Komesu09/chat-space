@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password:chiharu5051
   socket: /tmp/mysql.sock
 
 development:
@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: chat_space_production
-  username: chat_space
-  password: <%= ENV['chiharu5051'] %>
+   username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
