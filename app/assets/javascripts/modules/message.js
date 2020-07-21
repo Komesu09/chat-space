@@ -8,7 +8,7 @@ $(function(){
               ${message.user_name}
             </div>
             <div class="top__date">
-              ${message.creates_at}
+              ${message.created_at}
             </div>
           </div>
           <div class="message">
@@ -52,6 +52,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      
       let html = buildHTML(data);
       $('.Chat-main__message-list').append(html);
       $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight});
